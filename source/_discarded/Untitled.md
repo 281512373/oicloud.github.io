@@ -1,232 +1,316 @@
 title: Untitled
 author: John Doe
-date: 2019-05-19 21:19:53
-tags:
+tags: []
+categories: []
+date: 2019-05-19 21:22:00
 ---
----
-title: 更新内容
-tags: 更新说明,小书匠
-grammar_mindmap: true
-renderNumberedHeading: true
-grammar_code: true
-grammar_mathjax: true
----
+# 欢迎使用 Markdown在线编辑器 MdEditor
+
+**Markdown是一种轻量级的「标记语言」**
 
 
-[toc!?direction=lr]
-
-# 小书匠收费
-
-## 收费与不收费的区别
-
-### 收费
-
-#### 收费项目
-1. pdf 定制化导出(pdf封面，水印，加密等)
-2. 支持在线更新，优先使用新功能
-3. 配置数据同步
-4. 自定义数据中心
-
-#### 收费价格
-
-1. 一年 20￥, 两年 40￥。 目前只支持两年，如果付费超过 40￥,只能算做两年的套餐。
- 
-### 不收费
-
-1. 免费又实用的功能太多了，不知道重点写什么好，自己到 http://soft.xiaoshujiang.com/feature.html 这里看吧.....
-
-## 其他
-
-http://soft.xiaoshujiang.com/price.html
-
-___
-
-# 升级日志
-
-## 注
-
-如果您从较老版本的小书匠升级，内置数据库会有不兼容问题，建议在升级前进行数据导出备份，或者数据库文件备份，防止升级失败。
-
-数据库文件路径
-
-```
-Windows: %LOCALAPPDATA%/storywriter/
-Mac: ~/Library/Application Support/storywriter/
-Linux: ~/.config/storywriter
-```
-
-## 7.3.0
-
-开放小书匠官网( http://soft.xiaoshujiang.com )静态博客生成源码 ( https://github.com/suziwen/roadbike )
-
-### 7.3.0 新功能
-
-1. 添加全局资源中心,方便不同文章共用相同的资源。(比如文章部份内容的复制，自动将该部份内的图片资源也复制到对应的新文章上) #1076
-2. 添加腾讯云图床 v5 版本
-3. 图床图片自动在小书匠内置数据库保存一份，防止图床失效 #1075
-4. 导出时，添加`导出全局设置`， 提供导出时样式主题的单独设置功能 #1083
+![markdown](https://www.mdeditor.com/images/logos/markdown.png "markdown")
 
 
-### 7.3.0 修改
-
-1. 升级 pouchdb 到 7.0.0 版本
-2. 重构底层资源读取策略，改进文章切换速度，特别是有大量图片资源的文章
-3. 修复表格组件图片重复上传问题
-4. 绘图组件在打印成 pdf 时，如果空间允许，系统自动适当放大绘图显示效果
-5. 导出 docx 时， svg 图片无法正常显示的问题
-6. 调整附件语法显示的附件大小格式
-7. 限制用户上传的图片，附件大小，最大不能超过 30M
-8. 修复客户端重启失败问题
-9. 导出 docx 时，标签之间自动添加逗号
-
-## 7.2.2 
-
-### 7.2.2 新功能
-
-1. 添加代码块高亮语言别名 `设置>预览>代码块语言别名`
+Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面，Markdown文件的后缀名便是“.md”
 
 
-### 7.2.2 修改
+## MdEditor是一个在线编辑Markdown文档的编辑器
 
-1. 关闭微博图床，标明腾讯图床支持的版本
-2. 修复 codechunk 语法不能正确高亮代码块的问题
-3. 修复表格行列信息在打印，导出 pdf 时会被显示的问题 #1081
+*MdEditor扩展了Markdown的功能（如表格、脚注、内嵌HTML等等），以使让Markdown转换成更多的格式，和更丰富的展示效果，这些功能原初的Markdown尚不具备。*
 
-## 7.2.1
+> Markdown增强版中比较有名的有Markdown Extra、MultiMarkdown、 Maruku等。这些衍生版本要么基于工具，如~~Pandoc~~，Pandao；要么基于网站，如GitHub和Wikipedia，在语法上基本兼容，但在一些语法和渲染效果上有改动。
 
-### 7.2.1 新功能
+MdEditor源于Pandao的JavaScript开源项目，开源地址[Editor.md](https://github.com/pandao/editor.md "Editor.md")，并在MIT开源协议的许可范围内进行了优化，以适应广大用户群体的需求。向优秀的markdown开源编辑器原作者Pandao致敬。
 
-1. 数学公式引入 `extpfeil` , `mhchem`, `color` 等插件
 
-``` mathjax!
-$$
-\color{blue}{
-\enclose{box}{
-  \enclose{circle}{\bbox[5px]{x+y}} +
-  \enclose{circle}{\enclose{circle}{z}} -
-  \enclose{updiagonalstrike,downdiagonalstrike}{w}
+![Pandao editor.md](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png "Pandao editor.md")
+
+
+
+## MdEditor的功能列表演示
+
+# 标题H1
+
+## 标题H2
+
+### 标题H3
+
+#### 标题H4
+
+##### 标题H5
+
+###### 标题H5
+
+### 字符效果和横线等
+----
+
+~~删除线~~ <s>删除线（开启识别HTML标签时）</s>
+
+*斜体字*      _斜体字_
+
+**粗体**  __粗体__
+
+***粗斜体*** ___粗斜体___
+
+上标：X<sub>2</sub>，下标：O<sup>2</sup>
+
+**缩写(同HTML的abbr标签)**
+> 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启
+
+The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
+### 引用 Blockquotes
+
+> 引用文本 Blockquotes
+
+引用的行内混合 Blockquotes
+
+> 引用：如果想要插入空白换行`即<br />标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](https://www.mdeditor.com/)。
+
+### 锚点与链接 Links
+[普通链接](https://www.mdeditor.com/)
+[普通链接带标题](https://www.mdeditor.com/ "普通链接带标题")
+直接链接：<https://www.mdeditor.com>
+[锚点链接][anchor-id]
+[anchor-id]: https://www.mdeditor.com/
+[mailto:test.test@gmail.com](mailto:test.test@gmail.com)
+GFM a-tail link @pandao
+邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
+> @pandao
+
+### 多语言代码高亮 Codes
+
+#### 行内代码 Inline code
+
+
+执行命令：`npm install marked`
+
+#### 缩进风格
+
+即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
+
+    <?php
+        echo "Hello world!";
+    ?>
+预格式化文本：
+
+    | First Header  | Second Header |
+    | ------------- | ------------- |
+    | Content Cell  | Content Cell  |
+    | Content Cell  | Content Cell  |
+
+#### JS代码
+```javascript
+function test() {
+	console.log("Hello world!");
 }
-}
-$$
 ```
 
-
-``` mathjax!
-$$
-\ce{CO2 + C -> 2 CO}
-$$
+#### HTML 代码 HTML codes
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charest="utf-8" />
+        <meta name="keywords" content="Editor.md, Markdown, Editor" />
+        <title>Hello world!</title>
+        <style type="text/css">
+            body{font-size:14px;color:#444;font-family: "Microsoft Yahei", Tahoma, "Hiragino Sans GB", Arial;background:#fff;}
+            ul{list-style: none;}
+            img{border:none;vertical-align: middle;}
+        </style>
+    </head>
+    <body>
+        <h1 class="text-xxl">Hello world!</h1>
+        <p class="text-green">Plain text</p>
+    </body>
+</html>
 ```
+### 图片 Images
 
-``` mathjax!
-$$
-\xcancel{x+1}
-$$
+图片加链接 (Image + Link)：
+
+
+[![](https://www.mdeditor.com/images/logos/markdown.png)](https://www.mdeditor.com/images/logos/markdown.png "markdown")
+
+> Follow your heart.
+
+----
+### 列表 Lists
+
+#### 无序列表（减号）Unordered Lists (-)
+
+- 列表一
+- 列表二
+- 列表三
+
+#### 无序列表（星号）Unordered Lists (*)
+
+* 列表一
+* 列表二
+* 列表三
+
+#### 无序列表（加号和嵌套）Unordered Lists (+)
++ 列表一
++ 列表二
+    + 列表二-1
+    + 列表二-2
+    + 列表二-3
++ 列表三
+    * 列表一
+    * 列表二
+    * 列表三
+
+#### 有序列表 Ordered Lists (-)
+
+1. 第一行
+2. 第二行
+3. 第三行
+
+#### GFM task list
+
+- [x] GFM task list 1
+- [x] GFM task list 2
+- [ ] GFM task list 3
+    - [ ] GFM task list 3-1
+    - [ ] GFM task list 3-2
+    - [ ] GFM task list 3-3
+- [ ] GFM task list 4
+    - [ ] GFM task list 4-1
+    - [ ] GFM task list 4-2
+
+----
+
+### 绘制表格 Tables
+
+| 项目        | 价格   |  数量  |
+| --------   | -----:  | :----:  |
+| 计算机      | $1600   |   5     |
+| 手机        |   $12   |   12   |
+| 管线        |    $1    |  234  |
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+| Function name | Description                    |
+| ------------- | ------------------------------ |
+| `help()`      | Display the help window.       |
+| `destroy()`   | **Destroy your computer!**     |
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+
+| Item      | Value |
+| --------- | -----:|
+| Computer  | $1600 |
+| Phone     |   $12 |
+| Pipe      |    $1 |
+
+----
+
+#### 特殊符号 HTML Entities Codes
+
+&copy; &  &uml; &trade; &iexcl; &pound;
+&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot;
+
+X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
+
+18&ordm;C  &quot;  &apos;
+
+[========]
+
+### Emoji表情 :smiley:
+
+> Blockquotes :star:
+
+#### GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
+
+- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
+- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
+- [x] [ ] :smiley: this is a complete item :smiley:;
+- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao;
+- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
+    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
+    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
+
+#### 反斜杠 Escape
+
+\*literal asterisks\*
+
+[========]
+### 科学公式 TeX(KaTeX)
+
+$$E=mc^2$$
+
+行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
+
+$$x > y$$
+
+$$\(\sqrt{3x-1}+(1+x)^2\)$$
+
+$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
+
+多行公式：
+
+```math
+\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)
 ```
-
-``` mathjax!
-$$
-\xtwoheadrightarrow[c]{b}
-$$
+```katex
+\displaystyle
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        }
+    }
 ```
-
-``` mathjax!
-$$
-\bbox[#FD9,border:2px solid purple,10px]{
-  \bbox[red]{r} +
-  \bbox[green,5px]{\color{yellow}{g}} +
-  \bbox[border:2px dashed blue,3px]{b}
-}
-$$
+```latex
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
 ```
+### 分页符 Page break
 
-### 7.2.1 修改
+> Print Test: Ctrl + P
 
-1. 数学公式自动换行选项修改为打开状态
+[========]
 
-``` mathjax!
-\[\vec\nabla\times\vec F
-  = \left({\partial F_z\over\partial yt} - {\partial F_y\over\partial z}\right){\bf i}
-  + \left({\partial F_x\over\partial z} - {\partial F_z\over\partial x}\right){\bf j}
-  + \left({\partial F_y\over\partial x} - {\partial F_x\over\partial y}\right){\bf kb}
-\]
+### 绘制流程图 Flowchart
+
+```flow
+st=>start: 用户登陆
+op=>operation: 登陆操作
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
 ```
+[========]
 
-## 7.2.0
+### 绘制序列图 Sequence Diagram
 
-### 7.2.0 新功能
-
-1. 实现编辑器全局样式自定义入口
-2. 鼠标经过预览区表格时列高亮
-
-## 7.1.4
-
-### 7.1.4 修改
-
-1. 在预览区表格编号显示
-2. 在预览区表格鼠标经过显示效果
-3. 禁用所有 html 标签的 on 事件， #924
-
-## 7.1.3
-
-### 7.1.3 修改
-
-1. 改进导出 docx 效果
-2. 自定义图床路径时，如果有不存在的变量时，引起不能正常保存图片
-3. 图床迁移时替换功能改进
-4. 图片在表格内统一改为非块级图片
-5. 修改导出 docx 和 doc 说明
-
-## 7.1.2
-
-### 7.1.2 修改
-
-1. 图床设置添加更多基础变量 #1062
-
-## 7.1.1
-
-### 7.1.1 修改
-
-1. 代码块预览功能调整
-2. 修正代码块语言提示错误的问题
-3. 修复 开启写作模式和全屏阅读模式按钮无效 问题 #1058
-4. 修复错误的元数据格式造成文章无法保存的问题 #1059
-
-## 7.1.0
-
-### 7.1.0 新功能
-
-1. 添加邀请注册优惠功能，查看[详细说明](http://soft.xiaoshujiang.com/blog/user/invitation)
-2. 添加为知远程搜索功能 (会员)
-3. 添加为知按标签树结构显示文件功能 (会员)
-4. 添加 github 远程搜索功能 (会员)
-5. 升级 semantic ui  到 2.4.2 版本
-6. 升级底层 nwjs 到 0.36.2 版本
-
-
-### 7.1.0 修改
-
-1. 对为知笔记里通过 editor.md 编辑的文章图片地址做兼容适配
-2. 修正为知笔记标签没有正确同步到为知服务器的 bug
-3. 通过拖拽方式添加的图片，自动添加图片标题生成规则调整
-4. 解决代理弹出认证窗口的问题
-
-
-## 7.0.0
-
-### 7.0.0 新功能
-
-1. 升级底层 nwjs 到 0.36.1 版本
-2. 添加印象笔记/evernote 远程搜索功能(会员)
-3. 添加印象笔记/evernote 按标签树结构显示文件的功能(会员)
-4. 实现快速添加 fontawesome 5 图标按钮功能
-5. 升级 fontawesome 到 5.7.1 版本
-
-### 7.0.0 修改
-
-1. 修复 svg 格式的图片无法正常打印出 pdf 的问题
-2. 代理认证失败时，自动关闭代理功能
-3. 修复 fontawesome 图标导出印象笔记，或者发送邮件等情况时，图标消失问题
-4. 编辑器主题样式调整
-5. emoji 表情默认渲染为 svg 图标
-6. 图片为 svg 格式时，保存到印象笔记/evernote 不再做附件转换
-7. 修复代码块显示行号时，最后一行自动消失的 bug
+```seq
+Andrew->China: Says Hello
+Note right of China: China thinks\nabout it
+China-->Andrew: How are you?
+Andrew->>China: I am good thanks!
+```
+### End
